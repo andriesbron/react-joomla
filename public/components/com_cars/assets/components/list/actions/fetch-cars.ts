@@ -22,7 +22,7 @@ export function receiveCars(cars: Array<Car>) {
 export function fetchCars(resolver: Resolver) {
     return (dispatch) => {
         dispatch(requestCars());
-        return Http.get('/index.php/component/cars?task=cars.getAll', resolver)
+        return Http.get('index.php?option=com_cars&task=cars.getAll', resolver)
             .then((response) => {
                 dispatch(receiveCars(response.body));
             });

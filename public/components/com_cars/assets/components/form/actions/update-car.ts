@@ -9,7 +9,7 @@ import { receiveSavingCar } from './receive-saving-car'
 export function updateCar(id: number, car: Car, resolver: Resolver) {
     return (dispatch) => {
         dispatch(requestSavingCar());
-        return Http.post('/index.php/component/cars?task=cars.update&id=' + id, car, resolver)
+        return Http.post('index.php?option=com_cars&task=cars.update&id=' + id, car, resolver)
             .then(() => {
                 dispatch(receiveSavingCar());
                 dispatch(push('list'));

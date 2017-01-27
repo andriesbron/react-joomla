@@ -21,7 +21,7 @@ export function receiveRemoveCar(id) {
 export function removeCar(id: number, resolver: Resolver) {
     return (dispatch) => {
         dispatch(requestRemoveCar());
-        return Http.get('/index.php/component/cars?task=cars.delete&id=' + id, resolver)
+        return Http.get('index.php?option=com_cars&task=cars.delete&id=' + id, resolver)
             .then((response) => {
                 dispatch(receiveRemoveCar(id));
             });
