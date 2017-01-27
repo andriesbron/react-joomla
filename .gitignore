@@ -1,2 +1,5 @@
 /node_modules
 /typings
+.vscode
+
+public/components/com_cars/assets/build
