@@ -1,5 +1,8 @@
+/release
 /node_modules
 /typings
-.vscode
+/.vscode
+
+gulp-config.json
 
 public/components/com_cars/assets/build

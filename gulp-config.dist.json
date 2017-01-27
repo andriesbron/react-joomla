@@ -1,0 +1,4 @@
+{
+	"joomlaDir": "/path/to/joomla",
+	"defaultTasks": ["copy", "watch"]
+}
